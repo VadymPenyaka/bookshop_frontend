@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
 
 :root{
-    --green:#27ae60;
-    --dark-color:#219150;
+    --green:#24045e;
+    --dark-color:#346fe6;
     --black:#444;
     --light-color:#666;
     --border:.1rem solid rgba(0,0,0,.1);
@@ -707,37 +707,8 @@ section{
     color:var(--green);
 }
 
-.loader-container{
-    position: fixed;
-    top:0; left: 0;
-    height:100%;
-    width: 100%;
-    z-index: 10000;
-    background:#f7f7f7;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.loader-container.active{
-    display: none;
-}
-
-.loader-container img{
-    height:10rem;
-}
-
-
-
-
-
-
-
-
-
 
 /* media queries  */
-
 @media (max-width:991px){
 
     html{
