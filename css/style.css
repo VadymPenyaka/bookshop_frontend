@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 *{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -36,6 +36,7 @@ html{
     text-align: center;
     margin-bottom: 2rem;
     position: relative;
+   
 }
 
 .heading::before{
@@ -310,17 +311,26 @@ header{
 .footer .share{
     padding:1rem 0;
     text-align: center;
+    justify-content: space-between;
+    display: flex;
 }
 
 .footer .share a{
     height: 5rem;
     width: 5rem;
     line-height: 5rem;
+    float: left;
     font-size: 2rem;
     color:#fff;
     background:var(--color-2);
     margin:0 .3rem;
     border-radius: 50%; 
+}
+
+.footer .share p {
+    font-size: 3rem;
+    width: fit-content;
+    
 }
 
 .footer .share a:hover{
@@ -391,24 +401,27 @@ header{
 }
 
 .icons-container .icons{
-    font-size: 1.5rem;
+    font-size: 2rem;
     display: flex;
     align-items: center;
     gap:1rem;
-    padding:2rem 0;
-    
+    padding:2rem 0 2rem;
+    height: 4vh;
 }
 
+
+
 .newsletter{
-    background:url(../image/letter-bg.jpg) no-repeat;
+    background:url(../image/letter-bg.png) no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+   
 }
 
 .newsletter form{
     max-width: 45rem;
-    margin-left: auto;
+    margin: auto;
     text-align: center;
     padding:5rem 0;
 }
@@ -416,7 +429,7 @@ header{
 .newsletter form h3{
     font-size: 2.2rem;
     color:#fff;
-    padding-bottom: .7rem;
+    padding-bottom: 2rem;
     font-weight: normal;
 }
 
@@ -428,6 +441,12 @@ header{
     color:var(--color-2);
     border-radius: .5rem;
     text-transform: none;
+    border: none;
+}
+
+.newsletter .btn {
+   border-radius: .5rem;
+   border: none;
 }
 
 
@@ -471,6 +490,11 @@ header{
     color:var(--color-2);
 }
 
+#services {
+    display: flex;
+    height: 10vh;
+    flex-direction: column;
+}
 
 /* ================ RESPONSIVE & BREAKPOINTS ============= */
 @media (max-width:450px){
