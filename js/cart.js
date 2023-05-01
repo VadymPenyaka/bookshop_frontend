@@ -69,7 +69,7 @@ function handle_addCartItem() {
 
   // handle item is already exist
   if (itemsAdded.find((el) => el.title == newToAdd.title)) {
-    alert("This Item Is Already Exist!");
+    alert("Ця книга уже у корзині");
     return;
   } else {
     itemsAdded.push(newToAdd);
@@ -97,19 +97,19 @@ function handle_changeItemQuantity() {
   if (isNaN(this.value) || this.value < 1) {
     this.value = 1;
   }
-  this.value = Math.floor(this.value); // to keep it integer
+  this.value = Math.floor(this.value);
 
   update();
 }
 
 function handle_buyOrder() {
   if (itemsAdded.length <= 0) {
-    alert("There is No Order to Place Yet! \nPlease Make an Order first.");
+    alert("Зробіть замовлення!");
     return;
   }
   const cartContent = cart.querySelector(".cart-content");
   cartContent.innerHTML = "";
-  alert("Your Order is Placed Successfully :)");
+  alert("Ваше замовлення опрацьовано :)");
   itemsAdded = [];
 
   update();

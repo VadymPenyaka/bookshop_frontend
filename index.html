@@ -6,732 +6,154 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BookHUB</title>
 
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-
-    <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-    <!-- custom css file link  -->
     <link rel="stylesheet" href="css/style.css">
-
 </head>
 <body>
+    <header>        
+        <div class="nav container">
 
-<!-- header section starts  -->
+            <a href="index.html" class="logo"><img src="image/book.png" height="40px"></a>
+            <a href="interesting.html" class="logo">ЦІКАВЕ</a>
+            <a href="books.html" class="logo">КНИГИ</a>
+            <a href="about.html" class="logo">ПРО НАС</a>
+            
+            <i class='bx bx-shopping-bag logo' id="cart-icon"></i>
 
-<header class="header">
+            <div class="cart">
+                <h2 class="cart-title">Кошик</h2>
+                <div class="cart-content">  </div>
+                <div class="total">
+                    <div class="total-title">Загальна вартість</div>
+                    <div class="total-price">$0</div>
+                </div>
 
-    <div class="header-1">
-
-        <a href="#" class="logo"><img src="image/book.png" width="30px">Book<span style="color: orange">HUB </span></a>
-        <div class="icons">
-            <div id="search-btn" class="fas fa-search"></div>
-            <a href="#" class="fas fa-shopping-cart"></a>
-            <div id="login-btn" class="fas fa-user"></div>
+                <button type="button" class="btn-buy">Купити</button>
+                <i class='bx bx-x' id="cart-close"></i>
+            </div>
         </div>
-    </div>
+    </header>
 
-    <div class="header-2">
-        <nav class="navbar">
-
-            <a href="index.html"><img src="image/book.png" width="30px"></a>
-
-            <a href="#">Головна</a>
-            <!-- <a href="#featured">featured</a>
-            <a href="#arrivals">arrivals</a>
-            <a href="#reviews">reviews</a> -->
-            <a href="goods.html">Книги</a>
-            <a href="#a">Про нас</a>
-        </nav>
-    </div>
-
-</header>
-
-<!-- header section ends -->
-
-<!-- bottom navbar  -->
-
-<nav class="bottom-navbar">
-    <a href="#home" class="fas fa-home"></a>
-    <a href="#featured" class="fas fa-list"></a>
-    <a href="#arrivals" class="fas fa-tags"></a>
-    <a href="#reviews" class="fas fa-comments"></a>
-    <a href="#blogs" class="fas fa-blog"></a>
-</nav>
-
-<!-- login form  -->
-
-<div class="login-form-container">
-
+    <div id="search-btn"></div>
+    <div id="login-btn"></div>
     <div id="close-login-btn" class="fas fa-times"></div>
 
-    <form action="">
-        <h3>ввійти в аккаунт</h3>
-        <span>ім'я користувача</span>
-        <input type="email" name="" class="box" placeholder="введіть емайл" id="">
-        <span>пароль</span>
-        <input type="password" name="" class="box" placeholder="введіть пароль" id="">
-        <div class="checkbox">
-            <input type="checkbox" name="" id="remember-me">
-            <label for="remember-me">запам'ятати мене</label>
+    <!-- home section starts  -->
+    <section class="home" id="home">
+        <div class="row">
+            <div class="content">
+                <h3>Знижки до 20%</h3>
+                <a href="goods.html" class="btn">Купити зараз</a>
+            </div>
+            <div class="swiper books-slider swiper-wrapper">
+                <div class="swiper-wrapper">
+                    <img src="image/book-1.png" alt="" class="swiper-slide">
+                    <img src="image/book-2.png" alt="" class="swiper-slide">
+                    <img src="image/book-3.png" alt="" class="swiper-slide">
+                </div>
+            </div>
         </div>
-        <input type="submit" value="ввійти" class="btn">
-        <p>нагадати пароль ?<a href="#"> тиць сюди</a></p>
-        <p>немає аккаунту ?<a href="#"> створити</a></p>
-    </form>
+    </section>
 
-</div>
-
-<!-- home section starts  -->
-
-<section class="home" id="home">
-
-    <div class="row">
-
-        <div class="content">
-            <h3>Знижки до 30%</h3>
-            <a href="#" class="btn">Купити зараз</a>
-        </div>
-
-        <div class="swiper books-slider">
+    <!-- arrivals section starts  -->
+    <section class="arrivals" id="arrivals">
+        <h1 class="heading"> <span>Новинки</span> </h1>
+        <div class="swiper arrivals-slider">
             <div class="swiper-wrapper">
-                <a href="#" class="swiper-slide"><img src="image/book-1.png" alt=""></a>
-                <a href="#" class="swiper-slide"><img src="image/book-2.png" alt=""></a>
-                <a href="#" class="swiper-slide"><img src="image/book-3.png" alt=""></a>
-                <a href="#" class="swiper-slide"><img src="image/book-4.png" alt=""></a>
-                <a href="#" class="swiper-slide"><img src="image/book-5.png" alt=""></a>
-                <a href="#" class="swiper-slide"><img src="image/book-6.png" alt=""></a>
-            </div>
-            <img src="image/stand.png" class="stand" alt="">
-        </div>
 
-    </div>
-
-</section>
-
-<!-- home section ense  -->
-
-<!-- icons section starts  -->
-
-<section class="icons-container">
-
-    <div class="icons">
-        <i class="fas fa-shipping-fast"></i>
-        <div class="content">
-            <h3>Безкоштовна доставка</h3>
-            <p>Замовлення понад 1000 грн.</p>
-        </div>
-    </div>
-
-    <div class="icons">
-        <i class="fas fa-lock"></i>
-        <div class="content">
-            <h3>Безпечна оплата</h3>
-            <p></p>
-        </div>
-    </div>
-
-    <div class="icons">
-        <i class="fas fa-redo-alt"></i>
-        <div class="content">
-            <h3>Легке повернення</h3>
-            <p>14 днів на повернення</p>
-        </div>
-    </div>
-
-    <div class="icons">
-        <i class="fas fa-headset"></i>
-        <div class="content">
-            <h3>підтримка 24/7</h3>
-            <p>дзвоніть нам у будь-який час</p>
-        </div>
-    </div>
-
-</section>
-
-<!-- icons section ends -->
-
-<!-- featured section starts  -->
-
-<section class="featured" id="featured">
-
-    <h1 class="heading"> <span>Обрані Книги</span> </h1>
-
-    <div class="swiper featured-slider">
-
-        <div class="swiper-wrapper">
-
-            <div class="swiper-slide box">
-                <div class="icons">
-                    <a href="#" class="fas fa-search"></a>
-                    <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
-                </div>
-                <div class="image">
-                    <img src="image/book-1.png" alt="">
-                </div>
-                <div class="content">
-                    <h3>Програмування мовою С</h3>
-                    <div class="price">$15.99 <span>$20.99</span></div>
-                    <a href="#" class="btn">В кошик</a>
-                </div>
-            </div>
-
-            <div class="swiper-slide box">
-                <div class="icons">
-                    <a href="#" class="fas fa-search"></a>
-                    <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
-                </div>
-                <div class="image">
-                    <img src="image/book-2.png" alt="">
-                </div>
-                <div class="content">
-                    <h3>Програмування python</h3>
-                    <div class="price">$15.99 <span>$20.99</span></div>
-                    <a href="#" class="btn">В кошик</a>
-                </div>
-            </div>
-
-            <div class="swiper-slide box">
-                <div class="icons">
-                    <a href="#" class="fas fa-search"></a>
-                    <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
-                </div>
-                <div class="image">
-                    <img src="image/book-3.png" alt="">
-                </div>
-                <div class="content">
-                    <h3>Креативне програмування</h3>
-                    <div class="price">$15.99 <span>$20.99</span></div>
-                    <a href="#" class="btn">В кошик</a>
-                </div>
-            </div>
-
-            <div class="swiper-slide box">
-                <div class="icons">
-                    <a href="#" class="fas fa-search"></a>
-                    <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
-                </div>
-                <div class="image">
-                    <img src="image/book-4.png" alt="">
-                </div>
-                <div class="content">
-                    <h3>Тут все і так зрозуміло</h3>
-                    <div class="price">$15.99 <span>$20.99</span></div>
-                    <a href="#" class="btn">В кошик</a>
-                </div>
-            </div>
-
-            <div class="swiper-slide box">
-                <div class="icons">
-                    <a href="#" class="fas fa-search"></a>
-                    <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
-                </div>
-                <div class="image">
-                    <img src="image/book-5.png" alt="">
-                </div>
-                <div class="content">
-                    <h3>Життя чорним</h3>
-                    <div class="price">$15.99 <span>$20.99</span></div>
-                    <a href="#" class="btn">В кошик</a>
-                </div>
-            </div>
-
-            <div class="swiper-slide box">
-                <div class="icons">
-                    <a href="#" class="fas fa-search"></a>
-                    <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
-                </div>
-                <div class="image">
-                    <img src="image/book-6.png" alt="">
-                </div>
-                <div class="content">
-                    <h3>Примхи пристрасті</h3>
-                    <div class="price">$15.99 <span>$20.99</span></div>
-                    <a href="#" class="btn">В кошик</a>
-                </div>
-            </div>
-
-            <div class="swiper-slide box">
-                <div class="icons">
-                    <a href="#" class="fas fa-search"></a>
-                    <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
-                </div>
-                <div class="image">
-                    <img src="image/book-7.png" alt="">
-                </div>
-                <div class="content">
-                    <h3>Істроії з життя</h3>
-                    <div class="price">$15.99 <span>$20.99</span></div>
-                    <a href="#" class="btn">В кошик</a>
-                </div>
-            </div>
-
-            <div class="swiper-slide box">
-                <div class="icons">
-                    <a href="#" class="fas fa-search"></a>
-                    <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
-                </div>
-                <div class="image">
-                    <img src="image/book-8.png" alt="">
-                </div>
-                <div class="content">
-                    <h3>Буття клоуна</h3>
-                    <div class="price">$15.99 <span>$20.99</span></div>
-                    <a href="#" class="btn">В кошик</a>
-                </div>
-            </div>
-
-            <div class="swiper-slide box">
-                <div class="icons">
-                    <a href="#" class="fas fa-search"></a>
-                    <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
-                </div>
-                <div class="image">
-                    <img src="image/book-9.png" alt="">
-                </div>
-                <div class="content">
-                    <h3>Життя програміста</h3>
-                    <div class="price">$15.99 <span>$20.99</span></div>
-                    <a href="#" class="btn">В кошик</a>
-                </div>
-            </div>
-
-            <div class="swiper-slide box">
-                <div class="icons">
-                    <a href="#" class="fas fa-search"></a>
-                    <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
-                </div>
-                <div class="image">
-                    <img src="image/book-10.png" alt="">
-                </div>
-                <div class="content">
-                    <h3>Алкоголізм хвороба?</h3>
-                    <div class="price">$15.99 <span>$20.99</span></div>
-                    <a href="#" class="btn">В кошик</a>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-
-    </div>
-
-</section>
-
-<!-- featured section ends -->
-
-<!-- newsletter section starts -->
-
-<section class="newsletter">
-
-    <form action="">
-        <h3>Підписатись на останні оновлення</h3>
-        <input type="email" name="" placeholder="введіть вашу пошту" id="" class="box">
-        <input type="submit" value="Підписатись" class="btn">
-    </form>
-
-</section>
-
-<!-- newsletter section ends -->
-
-<!-- arrivals section starts  -->
-
-<section class="arrivals" id="arrivals">
-
-    <h1 class="heading"> <span>Новинки</span> </h1>
-
-    <div class="swiper arrivals-slider">
-
-        <div class="swiper-wrapper">
-
-            <a href="#" class="swiper-slide box">
-                <div class="image">
-                    <img src="image/book-1.png" alt="">
-                </div>
-                <div class="content">
-                    <h3>Новинка!</h3>
-                    <div class="price">$15.99 <span>$20.99</span></div>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
+                <a href="goods.html" class="swiper-slide box">
+                    <div class="image">
+                        <img src="image/book-6.png" alt="">
                     </div>
-                </div>
-            </a>
-
-            <a href="#" class="swiper-slide box">
-                <div class="image">
-                    <img src="image/book-2.png" alt="">
-                </div>
-                <div class="content">
-                    <h3>Новинка!</h3>
-                    <div class="price">$15.99 <span>$20.99</span></div>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
+                </a>
+                <a href="goods.html" class="swiper-slide box">
+                    <div class="image">
+                        <img src="image/book-7.png" alt="">
                     </div>
-                </div>
-            </a>
-
-            <a href="#" class="swiper-slide box">
-                <div class="image">
-                    <img src="image/book-3.png" alt="">
-                </div>
-                <div class="content">
-                    <h3>Новинка!</h3>
-                    <div class="price">$15.99 <span>$20.99</span></div>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
+                </a>
+                <a href="goods.html" class="swiper-slide box">
+                    <div class="image">
+                        <img src="image/book-8.png" alt="">
                     </div>
-                </div>
-            </a>
-
-            <a href="#" class="swiper-slide box">
-                <div class="image">
-                    <img src="image/book-4.png" alt="">
-                </div>
-                <div class="content">
-                    <h3>Новинка!</h3>
-                    <div class="price">$15.99 <span>$20.99</span></div>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                </div>
-            </a>
-
-            <a href="#" class="swiper-slide box">
-                <div class="image">
-                    <img src="image/book-5.png" alt="">
-                </div>
-                <div class="content">
-                    <h3>Новинка!</h3>
-                    <div class="price">$15.99 <span>$20.99</span></div>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                </div>
-            </a>
-
+                </a>               
+            </div>
         </div>
+    </section>
 
-    </div>
+    <!-- newsletter section starts -->
+    <section class="newsletter">
+        <form action="">
+            <h3>Підписатись на останні оновлення</h3>
+            <input type="email" name="" placeholder="введіть вашу пошту" id="" class="box">
+            <input type="submit" value="Підписатись" class="btn">
+        </form>
+    </section>
 
-    <div class="swiper arrivals-slider">
-
-        <div class="swiper-wrapper">
-
-            <a href="#" class="swiper-slide box">
-                <div class="image">
-                    <img src="image/book-6.png" alt="">
+    <!-- reviews section starts  -->
+    <section class="reviews" id="reviews">
+        <h1 class="heading"> <span>Відгуки</span> </h1>
+        <div class="swiper reviews-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide box">
+                    <img src="image/pic-1.png" alt="">
+                    <h3>John</h3>
+                    <p>Книга доволі якісна ти шикарна, читав із задоволенням!</p>
                 </div>
-                <div class="content">
-                    <h3>Новинка!</h3>
-                    <div class="price">$15.99 <span>$20.99</span></div>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
+                <div class="swiper-slide box">
+                    <img src="image/pic-2.png" alt="">
+                    <h3>Clara</h3>
+                    <p>Книга доволі якісна ти шикарна, читала із задоволенням!</p>
                 </div>
-            </a>
-
-            <a href="#" class="swiper-slide box">
-                <div class="image">
-                    <img src="image/book-7.png" alt="">
+                <div class="swiper-slide box">
+                    <img src="image/pic-3.png" alt="">
+                    <h3>Nik</h3>
+                    <p>Книга доволі якісна ти шикарна, читав із задоволенням!</p>
                 </div>
-                <div class="content">
-                    <h3>Новинка!</h3>
-                    <div class="price">$15.99 <span>$20.99</span></div>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                </div>
-            </a>
-
-            <a href="#" class="swiper-slide box">
-                <div class="image">
-                    <img src="image/book-8.png" alt="">
-                </div>
-                <div class="content">
-                    <h3>Новинка!</h3>
-                    <div class="price">$15.99 <span>$20.99</span></div>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                </div>
-            </a>
-
-            <a href="#" class="swiper-slide box">
-                <div class="image">
-                    <img src="image/book-9.png" alt="">
-                </div>
-                <div class="content">
-                    <h3>Новинка!</h3>
-                    <div class="price">$15.99 <span>$20.99</span></div>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                </div>
-            </a>
-
-            <a href="#" class="swiper-slide box">
-                <div class="image">
-                    <img src="image/book-10.png" alt="">
-                </div>
-                <div class="content">
-                    <h3>Новинка!</h3>
-                    <div class="price">$15.99 <span>$20.99</span></div>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                </div>
-            </a>
-
+            </div>
         </div>
-
-    </div>
-
-</section>
-
-<!-- arrivals section ends -->
+    </section>
 
 
-<!-- reviews section starts  -->
+    <!-- icons section starts  -->
+    <section class="icons-container">
+        <h1 class="heading"> <span>Послуги</span> </h1>
 
-<section class="reviews" id="reviews">
-
-    <h1 class="heading"> <span>Відгуки</span> </h1>
-
-    <div class="swiper reviews-slider">
-
-        <div class="swiper-wrapper">
-
-            <div class="swiper-slide box">
-                <img src="image/pic-1.png" alt="">
-                <h3>john deo</h3>
-                <p>Книга доволі якісна ти шикарна, читав із задоволенням!</p>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
+        <div class="icons">
+            <i class="fas fa-shipping-fast"></i>
+            <div class="content">
+                <h3>Безкоштовна доставка</h3>
             </div>
-
-            <div class="swiper-slide box">
-                <img src="image/pic-2.png" alt="">
-                <h3>joana bye</h3>
-                <p>Книга доволі якісна ти шикарна, читала із задоволенням!</p>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-            </div>
-
-            <div class="swiper-slide box">
-                <img src="image/pic-3.png" alt="">
-                <h3>valera pypov</h3>
-                <p>Книга доволі якісна ти шикарна, читав із задоволенням!</p>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-            </div>
-            <div class="swiper-slide box">
-                <img src="image/pic-4.png" alt="">
-                <h3>bak volodymyr</h3>
-                <p>Книга доволі якісна ти шикарна, читав із задоволенням!</p>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-            </div>
-
-            <div class="swiper-slide box">
-                <img src="image/pic-5.png" alt="">
-                <h3>pasternak volodymyr</h3>
-                <p>Книга доволі якісна ти шикарна, читав із задоволенням!</p>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-            </div>
-
-            <div class="swiper-slide box">
-                <img src="image/pic-6.png" alt="">
-                <h3>yurii koshkin</h3>
-                <p>Шикарні книги, та шикарний сайт! А я взагалі найкращий!</p>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-            </div>
-
         </div>
-
-    </div>
-    
-</section>
-
-<!-- reviews section ends -->
-
-<!-- blogs section starts  -->
-<!-- 
-<section class="blogs" id="blogs">
-
-    <h1 class="heading"> <span>our blogs</span> </h1>
-
-    <div class="swiper blogs-slider">
-
-        <div class="swiper-wrapper">
-
-            <div class="swiper-slide box">
-                <div class="image">
-                    <img src="image/blog-1.jpg" alt="">
-                </div>
-                <div class="content">
-                    <h3>blog title goes here</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, odio.</p>
-                    <a href="#" class="btn">read more</a>
-                </div>
+        <div class="icons">
+            <i class="fas fa-lock"></i>
+            <div class="content">
+                <h3>Безпечна оплата</h3>
             </div>
-
-            <div class="swiper-slide box">
-                <div class="image">
-                    <img src="image/blog-2.jpg" alt="">
-                </div>
-                <div class="content">
-                    <h3>blog title goes here</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, odio.</p>
-                    <a href="#" class="btn">read more</a>
-                </div>
-            </div>
-
-            <div class="swiper-slide box">
-                <div class="image">
-                    <img src="image/blog-3.jpg" alt="">
-                </div>
-                <div class="content">
-                    <h3>blog title goes here</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, odio.</p>
-                    <a href="#" class="btn">read more</a>
-                </div>
-            </div>
-
-            <div class="swiper-slide box">
-                <div class="image">
-                    <img src="image/blog-4.jpg" alt="">
-                </div>
-                <div class="content">
-                    <h3>blog title goes here</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, odio.</p>
-                    <a href="#" class="btn">read more</a>
-                </div>
-            </div>
-
-            <div class="swiper-slide box">
-                <div class="image">
-                    <img src="image/blog-5.jpg" alt="">
-                </div>
-                <div class="content">
-                    <h3>blog title goes here</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, odio.</p>
-                    <a href="#" class="btn">read more</a>
-                </div>
-            </div>
-
         </div>
+        <div class="icons">
+            <i class="fas fa-headset"></i>
+            <div class="content">
+                <h3>Підтримка 24/7</h3>
+            </div>
+        </div>
+    </section>
 
-    </div>
+    <!-- footer section starts  -->
+    <section class="footer">
+        <h1 class="heading"> <span>Соц. мережі</span> </h1>
+        <div class="share">
+            <a href="https://www.facebook.com/" class="fab fa-facebook-f"></a>
+            <a href="https://twitter.com/" class="fab fa-twitter"></a>
+            <a href="https://www.instagram.com/" class="fab fa-instagram"></a>
+        </div>
+    </section>
 
-</section> -->
 
-<!-- blogs section ends -->
-
-<!-- footer section starts  -->
-
-<section class="footer">
-
-    <h1 class="heading"> <span>Наші Соц.Мережі</span> </h1>
-    <div class="share">
-        <a href="#" class="fab fa-facebook-f"></a>
-        <a href="#" class="fab fa-twitter"></a>
-        <a href="#" class="fab fa-instagram"></a>
-        <a href="#" class="fab fa-linkedin"></a>
-        <a href="#" class="fab fa-pinterest"></a>
-    </div>
-
-</section>
-
-<!-- footer section ends -->
-
-<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-
-<!-- custom js file link  -->
-<script src="js/script.js"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/cart.js"></script>
 
 </body>
 </html>
