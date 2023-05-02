@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,51 +9,79 @@
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">    
 </head>
 
 <body>
-    <!-- HEADER  -->
     <header>
-        <!-- NAV  -->
         <div class="nav container">
-
             <a href="index.html" class="logo"><img src="image/book.png" height="40px"></a>
             <a href="interesting.html" class="logo">ЦІКАВЕ</a>
             <a href="books.html" class="logo">КНИГИ</a>
             <a href="about.html" class="logo">ПРО НАС</a>
             
             <i class='bx bx-shopping-bag logo' id="cart-icon"></i>
-
-            <!-- CART  -->
+    
             <div class="cart">
                 <h2 class="cart-title">Кошик</h2>
-
-                <!-- CONTENT  -->
                 <div class="cart-content">  </div>
-
-                <!-- TOTAL   -->
                 <div class="total">
                     <div class="total-title">Загальна вартість</div>
                     <div class="total-price">$0</div>
                 </div>
-                <!-- BUY BUTTON  -->
+    
                 <button type="button" class="btn-buy">Купити</button>
-                <!-- CART CLOSE  -->
                 <i class='bx bx-x' id="cart-close"></i>
             </div>
         </div>
     </header>
-
-
-
-
-
-
+    
+    <div id="search-btn"></div>
+    <div id="login-btn"></div>
+    <div id="close-login-btn" class="fas fa-times"></div>
+    
+    <section class="about" id="about">
+        <h1 class="heading"> <span>Про нас</span> </h1>
+        <p>BookHUB є найкращим онлайн-магазином книжок, який пропонує широкий асортимент книг з усього світу. Ми робимо все можливе, щоб наші клієнти могли знайти тут те, що їм потрібно. У нашому магазині ви можете знайти як класичні твори, так і найновіші бестселери. Ми завжди стежимо за оновленнями на книжковому ринку, щоб пропонувати вам найкращі книжки за доступними цінами.</p>
+        <div class="container">
+            <div class="creator">
+                <img src="image/creator-1.png" alt="">
+                <h3>Вадим Пеняка</h3>
+                <p>Вадим - засновник магазину BookHUB із багаторічним досвідом в книжковій справі. Він займається вибором книжок і завжди прагне допомогти клієнтам у виборі.</p>
+            </div>
+            <div class="creator">
+                <img src="image/creator-2.png" alt="">
+                <h3>Юрій Кошкін</h3>
+                <p>Юрій - керівник відділу з продажу книжок. Він завжди готовий допомогти клієнтам у виборі та відповісти на всі їх запитання.</p>
+            </div>
+            <div class="creator">
+                <img src="image/creator-3.png" alt="">
+                <h3>Максим Дяк</h3>
+                <p>Максим - фахівець з реклами та маркетингу. Він займається рекламою BookHUB та просуванням магазину в соціальних мережах.</p>
+            </div>
+            <div class="creator">
+                <img src="image/creator-4.png" alt="">
+                <h3>Дімітрій Рогатюк</h3>
+                <p>Дімітріус - керівник відділу з логістики. Він забезпечує швидку та якісну доставку книжок усім нашим клієнтам.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="footer">
+        <h1 class="heading"> <span>Контакти</span> </h1>
+        <div class="share">
+            <div class="links">
+                <a href="https://www.facebook.com/" class="fab fa-facebook-f"></a>
+                <a href="https://twitter.com/" class="fab fa-twitter"></a>
+                <a href="https://www.instagram.com/" class="fab fa-instagram"></a>
+            </div>
+            <p>Телефон: (032) 2582009</p>
+        </div>
+    </section>
 
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/cart.js"></script>
-
+    
 </body>
 </html>

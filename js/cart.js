@@ -20,6 +20,7 @@ if (document.readyState == "loading") {
 
 // =============== START ====================
 function start() {
+  initializeCart();
   addEvents();
 }
 
@@ -56,6 +57,10 @@ function addEvents() {
 }
 
 // ============= HANDLE EVENTS FUNCTIONS =============
+function getCartItems() {
+  return JSON.parse(localStorage.getItem('cartItems')) || [];
+}
+
 let itemsAdded = [];
 
 function handle_addCartItem() {
@@ -65,7 +70,7 @@ function handle_addCartItem() {
   let imgSrc = product.querySelector(".product-img").src;
   console.log(title, price, imgSrc);
 
-  let newToAdd = {title, price, imgSrc};
+  let newToAdd = { title, price, imgSrc, quantity: 1 }; // Add quantity property to the object
 
   // handle item is already exist
   if (itemsAdded.find((el) => el.title == newToAdd.title)) {
@@ -76,11 +81,13 @@ function handle_addCartItem() {
   }
 
   // Add product to cart
-  let cartBoxElement = CartBoxComponent(title, price, imgSrc);
+  let cartBoxElement = CartBoxComponent(title, price, imgSrc, 1);
   let newNode = document.createElement("div");
   newNode.innerHTML = cartBoxElement;
   const cartContent = cart.querySelector(".cart-content");
   cartContent.appendChild(newNode);
+
+  localStorage.setItem('cartItems', JSON.stringify(itemsAdded));
 
   update();
 }
@@ -88,7 +95,10 @@ function handle_addCartItem() {
 function handle_removeCartItem() {
   this.parentElement.remove();
   itemsAdded = itemsAdded.filter((el) =>
-      el.title != this.parentElement.querySelector(".cart-product-title").innerHTML);
+    el.title != this.parentElement.querySelector(".cart-product-title").innerHTML
+  );
+
+  localStorage.setItem('cartItems', JSON.stringify(itemsAdded));
 
   update();
 }
@@ -98,6 +108,14 @@ function handle_changeItemQuantity() {
     this.value = 1;
   }
   this.value = Math.floor(this.value);
+
+  // Update the quantity in the itemsAdded array
+  const cartBox = this.closest(".cart-box");
+  const cartProductTitle = cartBox.querySelector(".cart-product-title").innerHTML;
+  const item = itemsAdded.find((el) => el.title == cartProductTitle);
+  item.quantity = parseInt(this.value);
+
+  localStorage.setItem('cartItems', JSON.stringify(itemsAdded));
 
   update();
 }
@@ -130,14 +148,28 @@ function updateTotal() {
   totalElement.innerHTML = "$" + total;
 }
 
-function CartBoxComponent(title, price, imgSrc) {
+function initializeCart() {
+  itemsAdded = getCartItems();
+  const cartContent = cart.querySelector(".cart-content");
+
+  itemsAdded.forEach((item) => {
+    let cartBoxElement = CartBoxComponent(item.title, item.price, item.imgSrc, item.quantity);
+    let newNode = document.createElement("div");
+    newNode.innerHTML = cartBoxElement;
+    cartContent.appendChild(newNode);
+  });
+
+  updateTotal();
+}
+
+function CartBoxComponent(title, price, imgSrc, quantity) {
   return `
     <div class="cart-box">
         <img src=${imgSrc} alt="" class="cart-img">
         <div class="detail-box">
             <div class="cart-product-title">${title}</div>
             <div class="cart-price">${price}</div>
-            <input type="number" value="1" class="cart-quantity">
+            <input type="number" value="${quantity}" class="cart-quantity">
         </div>
         <!-- REMOVE CART  -->
         <i class='bx bxs-trash-alt cart-remove'></i>
