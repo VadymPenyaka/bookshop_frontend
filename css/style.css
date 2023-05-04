@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Sigmar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
 *{
-    font-family: 'Sigmar', cursive;
+    font-family: 'Oswald', cursive;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -454,4 +454,64 @@ header{
         font-size: 50%;
     }
 
+}
+
+/* Loader */
+.loaderbefore {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: lightgrey;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    width: 192px;
+    height: 192px;
+    border-radius: 50%;
+    display: inline-block;
+    border-top: 8px solid #FFF;
+    border-right: 8px solid transparent;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+  }
+  .loader::after {
+    content: '';  
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 192px;
+    height: 192px;
+    border-radius: 50%;
+    border-left: 8px solid #24045e;
+    border-bottom: 8px solid transparent;
+    animation: rotation 0.5s linear infinite reverse;
+  }
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  } 
+
+  .disppear{
+  animation: vanish 2s forwards;
+
+}
+@keyframes vanish {
+    0%{
+        opacity: 100; 
+        visibility: visible;
+      }
+  100%{
+    opacity: 0;
+    visibility: hidden;
+  }
 }

@@ -26,25 +26,33 @@ window.onscroll = () =>{
 
 }
 
-window.onload = () =>{
+var loader = document.querySelector(".loaderbefore")
 
-  if(window.scrollY > 80){
-    document.querySelector('.header .header-2').classList.add('active');
-  }else{
-    document.querySelector('.header .header-2').classList.remove('active');
-  }
+window.addEventListener("load", vanish);
 
-  fadeOut();
-
+function vanish() {
+  loader.classList.add("disppear");
 }
 
-function loader(){
-  document.querySelector('.loader-container').classList.add('active');
-}
+// window.onload = () =>{
 
-function fadeOut(){
-  setTimeout(loader, 4000);
-}
+//   if(window.scrollY > 80){
+//     document.querySelector('.header .header-2').classList.add('active');
+//   }else{
+//     document.querySelector('.header .header-2').classList.remove('active');
+//   }
+
+//   fadeOut();
+
+// }
+
+// function loader(){
+//   document.querySelector('.loader-container').classList.add('active');
+// }
+
+// function fadeOut(){
+//   setTimeout(loader, 4000);
+// }
 
 var swiper = new Swiper(".books-slider", {
   loop:true,
@@ -163,3 +171,4 @@ var swiper = new Swiper(".blogs-slider", {
 function subs(){
   alert('Ви підписались на оновлення!')
 }
+
