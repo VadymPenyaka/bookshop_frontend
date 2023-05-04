@@ -158,3 +158,8 @@ var swiper = new Swiper(".blogs-slider", {
     },
   },
 });
+
+
+function subs(){
+  alert('Ви підписались на оновлення!')
+}
