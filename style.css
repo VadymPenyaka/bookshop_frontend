@@ -305,12 +305,6 @@ header{
 }
 
 
-.home{
-    background: url(../image/banner-bg.jpg) no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
 .home .row{
     display:flex;
     align-items: center;
@@ -502,7 +496,7 @@ header{
   } 
 
   .disppear{
-  animation: vanish 0.25s forwards;
+  animation: vanish 2s forwards;
 
 }
 @keyframes vanish {
